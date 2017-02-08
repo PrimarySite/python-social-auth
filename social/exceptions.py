@@ -35,7 +35,7 @@ class AuthFailed(AuthException):
     def __str__(self):
         msg = super(AuthFailed, self).__str__()
         if msg == 'access_denied':
-            return 'Connecting to your account has been cancelled.'
+            return 'Connecting to your account failed.'
         return 'Connecting to your account failed: {0}'.format(msg)
 
 
