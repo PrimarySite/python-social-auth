@@ -35,8 +35,8 @@ class AuthFailed(AuthException):
     def __str__(self):
         msg = super(AuthFailed, self).__str__()
         if msg == 'access_denied':
-            return 'Authentication process was cancelled'
-        return 'Authentication failed: {0}'.format(msg)
+            return 'Connecting to your account has been cancelled.'
+        return 'Connecting to your account failed: {0}'.format(msg)
 
 
 class AuthCanceled(AuthException):
@@ -46,7 +46,7 @@ class AuthCanceled(AuthException):
         super(AuthCanceled, self).__init__(*args, **kwargs)
 
     def __str__(self):
-        return 'Authentication process cancelled'
+        return 'Connecting to your account has been cancelled.'
 
 
 class AuthUnknownError(AuthException):
